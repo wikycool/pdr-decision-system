@@ -1,1 +1,4 @@
-
+alternative_id,description,final_score,total_weight,cost_score,weight_score,corrosion_score,strength_score,manufacturability_score
+ALT_001,Aluminum Enclosure,15.5,10.0,2,2,1,1,2
+ALT_002,Stainless Steel Enclosure,12.3,10.0,1,1,2,2,1
+ALT_003,Plastic Enclosure,8.7,10.0,2,2,0,0,2

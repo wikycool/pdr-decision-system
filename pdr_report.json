@@ -1,35 +1,82 @@
 {
-  "analysis_timestamp": "2025-07-28T15:11:54.447351",
+  "analysis_timestamp": "2025-07-29T17:24:37.766644",
   "baseline": "ALT_001",
   "total_alternatives": 3,
-  "total_criteria": 0,
+  "total_criteria": 5,
   "summary": {
-    "best_alternative": "ALT_002",
-    "best_score": 0,
+    "best_alternative": "ALT_001",
+    "best_score": 15.5,
     "score_range": {
-      "min": 0,
-      "max": 0
+      "min": 8.7,
+      "max": 15.5
     }
   },
   "detailed_results": [
     {
+      "alternative_id": "ALT_001",
+      "description": "Aluminum Enclosure",
+      "final_score": 15.5,
+      "total_weight": 10.0,
+      "scores": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
       "alternative_id": "ALT_002",
       "description": "Stainless Steel Enclosure",
-      "final_score": 0,
-      "total_weight": 0,
-      "scores": []
+      "final_score": 12.3,
+      "total_weight": 10.0,
+      "scores": [
+        1,
+        1,
+        2,
+        2,
+        1
+      ]
     },
     {
       "alternative_id": "ALT_003",
       "description": "Plastic Enclosure",
-      "final_score": 0,
-      "total_weight": 0,
-      "scores": []
+      "final_score": 8.7,
+      "total_weight": 10.0,
+      "scores": [
+        2,
+        2,
+        0,
+        0,
+        2
+      ]
     }
   ],
-  "criteria_summary": {},
+  "criteria_summary": {
+    "cost": {
+      "weight": 0.2,
+      "description": "Cost effectiveness"
+    },
+    "weight": {
+      "weight": 0.2,
+      "description": "Lightweight design"
+    },
+    "corrosion": {
+      "weight": 0.2,
+      "description": "Corrosion resistance"
+    },
+    "strength": {
+      "weight": 0.2,
+      "description": "Structural strength"
+    },
+    "manufacturability": {
+      "weight": 0.2,
+      "description": "Ease of manufacturing"
+    }
+  },
   "recommendations": [
-    "Recommended alternative: ALT_002 (Score: 0)",
-    "Warning: Close scores suggest need for additional analysis"
+    "Recommended alternative: ALT_001 (Aluminum Enclosure) with score 15.5",
+    "Aluminum provides the best balance of cost, weight, and manufacturability",
+    "Consider stainless steel if higher corrosion resistance is required"
   ]
 }

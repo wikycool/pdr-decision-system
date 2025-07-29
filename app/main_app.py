@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 from pathlib import Path
 import sys
 import os
+import base64
 
 # Add src to path for imports
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
@@ -22,10 +23,45 @@ try:
     from ml.material_recommender import MaterialTechnologyRecommender
     from scoring.enhanced_pugh import EnhancedPughMatrix
     from ml.enhanced_npd_analyzer import EnhancedNPDAnalyzer
+    from reports.dar_report import generate_dar
     MODULES_AVAILABLE = True
 except ImportError as e:
     st.error(f"Import error: {e}")
     MODULES_AVAILABLE = False
+
+def create_download_link(val, filename):
+    """Create a download link for files."""
+    b64 = base64.b64encode(val)  # val looks like b'...'
+    return f'<a href="data:application/octet-stream;base64,{b64.decode()}" download="{filename}">Download {filename}</a>'
+
+def generate_pdf_report(results_data):
+    """Generate PDF report from results data."""
+    try:
+        # Create a temporary CSV file for PDF generation
+        if 'pugh_results' in results_data and results_data['pugh_results']:
+            # Use existing CSV data or create new
+            csv_data = results_data['pugh_results'].get('detailed_results', [])
+            if csv_data:
+                df = pd.DataFrame(csv_data)
+                temp_csv = 'temp_pdr_results.csv'
+                df.to_csv(temp_csv, index=False)
+                
+                # Generate PDF
+                pdf_filename = 'pdr_analysis_report.pdf'
+                generate_dar(temp_csv, pdf_filename)
+                
+                # Read the generated PDF
+                with open(pdf_filename, 'rb') as f:
+                    pdf_data = f.read()
+                
+                # Clean up temporary file
+                if os.path.exists(temp_csv):
+                    os.remove(temp_csv)
+                
+                return pdf_data, pdf_filename
+    except Exception as e:
+        st.error(f"Error generating PDF: {e}")
+        return None, None
 
 def main():
     """Main Streamlit application for PDR Decision System."""
@@ -835,7 +871,7 @@ def show_results():
     # Export options
     st.subheader("📤 Export Results")
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         if st.button("📄 Export to JSON"):
@@ -889,6 +925,30 @@ def show_results():
                 st.success("✅ Report generated as pdr_report.md")
             else:
                 st.warning("No PDR results to generate report from")
+    
+    with col4:
+        if st.button("📄 Generate Analysis Report"):
+            # Combine all results
+            all_results = {
+                'document_analysis': st.session_state.get('document_analysis'),
+                'pugh_results': st.session_state.get('pugh_results'),
+                'pdr_results': st.session_state.get('pdr_results')
+            }
+            
+            # Generate PDF report
+            pdf_data, pdf_filename = generate_pdf_report(all_results)
+            
+            if pdf_data and pdf_filename:
+                # Create download link
+                download_link = create_download_link(pdf_data, pdf_filename)
+                st.markdown(download_link, unsafe_allow_html=True)
+                st.success("✅ Analysis report generated successfully!")
+                
+                # Clean up the PDF file
+                if os.path.exists(pdf_filename):
+                    os.remove(pdf_filename)
+            else:
+                st.warning("No data available to generate PDF report")
 
 def show_data_management():
     """Data management page."""
@@ -1197,9 +1257,38 @@ def show_one_click_analysis():
                     
                     # Export option
                     st.subheader("📄 Export Complete Report")
-                    if st.button("📊 Generate Complete Analysis Report"):
-                        st.success("✅ Complete analysis report generated successfully!")
-                        st.info("📋 Report includes: Document analysis, AI/ML recommendations, decision matrix results, and strategic insights.")
+                    
+                    col1, col2 = st.columns(2)
+                    
+                    with col1:
+                        if st.button("📊 Generate Complete Analysis Report"):
+                            st.success("✅ Complete analysis report generated successfully!")
+                            st.info("📋 Report includes: Document analysis, AI/ML recommendations, decision matrix results, and strategic insights.")
+                    
+                    with col2:
+                        if st.button("📄 Download PDF Report"):
+                            # Create comprehensive results data
+                            comprehensive_results = {
+                                'document_analysis': results,
+                                'ai_ml_recommendations': ai_report,
+                                'decision_matrix': results_matrix if 'results_matrix' in locals() else [],
+                                'summary': summary
+                            }
+                            
+                            # Generate PDF report
+                            pdf_data, pdf_filename = generate_pdf_report(comprehensive_results)
+                            
+                            if pdf_data and pdf_filename:
+                                # Create download link
+                                download_link = create_download_link(pdf_data, pdf_filename)
+                                st.markdown(download_link, unsafe_allow_html=True)
+                                st.success("✅ PDF report ready for download!")
+                                
+                                # Clean up the PDF file
+                                if os.path.exists(pdf_filename):
+                                    os.remove(pdf_filename)
+                            else:
+                                st.warning("No data available to generate PDF report")
                 
         except Exception as e:
             st.error(f"❌ Error during analysis: {e}")

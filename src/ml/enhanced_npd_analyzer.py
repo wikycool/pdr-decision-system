@@ -21,7 +21,7 @@ from datetime import datetime
 class EnhancedNPDAnalyzer:
     """
     Comprehensive NPD analyzer using multiple AI/ML algorithms.
-    Demonstrates advanced product development capabilities for LTIMindtree interview.
+    Demonstrates advanced product development capabilities for enterprise NPD workflows.
     """
     
     def __init__(self):

@@ -1,6 +1,6 @@
 # 🚀 AI-Powered New Product Development (NPD) System
 
-## 🎯 **LTIMindtree Technical Interview Project**
+## 🎯 **AI-Powered PDR Decision System**
 
 A comprehensive **New Product Development (NPD)** system that demonstrates AI/ML integration throughout the Preliminary Design Review (PDR) process. This system showcases advanced document analysis, intelligent requirement extraction, and AI-driven decision making for product development.
 
@@ -72,7 +72,7 @@ Categorization    Product Picture       Alternatives       NPD Complete
 ### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/pdr-decision-system.git
+git clone https://github.com/wikycool/pdr-decision-system.git
 cd pdr-decision-system
 
 # Install dependencies
@@ -164,9 +164,9 @@ python run_app.py
 └── Best Choice: Aluminum Solution
 ```
 
-## 🎯 **LTIMindtree Interview Ready**
+## 🎯 **Production Ready System**
 
-### **Technical Demonstration Points**
+### **Technical Features**
 - ✅ **AI/ML Integration**: LangChain, RandomForest, SVR algorithms
 - ✅ **NPD Process**: Complete product development workflow
 - ✅ **Decision Making**: Structured evaluation with Pugh matrix
@@ -208,7 +208,7 @@ python run_app.py
 # Watch: Complete NPD analysis in action!
 ```
 
-## 🎉 **Perfect for Your Interview!**
+## 🎉 **Perfect for Production Use!**
 
 This system demonstrates:
 - ✅ **Advanced AI/ML implementation**
@@ -217,7 +217,7 @@ This system demonstrates:
 - ✅ **Client-ready outputs**
 - ✅ **Scalable architecture**
 
-**Ready to impress your LTIMindtree technical team!** 🚀✨
+**Ready for enterprise deployment!** 🚀✨
 
 ## 📞 **Support**
 
@@ -228,10 +228,10 @@ For questions or issues:
 
 ## 📄 **License**
 
-This project is developed for LTIMindtree technical interview demonstration purposes.
+This project is open source and available for engineers, product managers, and development teams worldwide. Feel free to use, modify, and contribute to improve NPD workflows globally.
 
 ---
 
-**Repository**: https://github.com/yourusername/pdr-decision-system  
+**Repository**: https://github.com/wikycool/pdr-decision-system  
 **Version**: 1.0  
-**Status**: Ready for Technical Interview Demonstration
+**Status**: Ready for Production Deployment

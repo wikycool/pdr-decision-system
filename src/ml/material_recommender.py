@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 AI/ML Material and Technology Recommender
-Designed for LTIMindtree PDR requirements
+Designed for enterprise PDR requirements
 """
 
 import pandas as pd

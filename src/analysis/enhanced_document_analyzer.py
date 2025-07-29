@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Enhanced Document Analyzer for T&C Extraction
-Specifically designed for LTIMindtree PDR requirements
+Specifically designed for enterprise PDR requirements
 """
 
 import re
@@ -33,7 +33,7 @@ except ImportError:
 class EnhancedDocumentAnalyzer:
     """
     Enhanced document analyzer for T&C extraction with primary/secondary/tertiary categorization.
-    Designed specifically for LTIMindtree PDR requirements.
+    Designed specifically for enterprise PDR requirements.
     """
     
     def __init__(self):

@@ -3,7 +3,7 @@
 
 **Author:** [Your Name]  
 **Date:** [Current Date]  
-**Organization:** LTIMindtree  
+**Organization:** Enterprise NPD Teams  
 **Project:** AI/ML-Powered PDR Workflow System  
 
 ---
@@ -435,4 +435,4 @@ aiml-decision-demo/
 
 ---
 
-*This report demonstrates the technical implementation of an AI/ML-powered PDR workflow system for LTIMindtree technical interview purposes.* 
+*This report demonstrates the technical implementation of an AI/ML-powered PDR workflow system for enterprise NPD automation.* 

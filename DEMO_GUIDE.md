@@ -1,4 +1,4 @@
-# 🎯 LTIMindtree PDR System - Demo Guide
+# 🎯 AI-Powered PDR System - Demo Guide
 
 ## 🚀 Quick Start
 
@@ -11,7 +11,7 @@ Open your browser and navigate to: **http://localhost:8501**
 ✅ **AI/ML Components**: Material recommender working  
 ✅ **Document Analysis**: Enhanced analyzer functional  
 
-## 🎯 Demo Flow for LTIMindtree Interview
+## 🎯 Demo Flow for System Demonstration
 
 ### **Step 1: Document Analysis** 📄
 1. **Navigate to**: "📄 Document Analysis" in the sidebar
@@ -110,7 +110,7 @@ Open your browser and navigate to: **http://localhost:8501**
    - Complete workflow summary
 3. **Export Reports**: Download PDF, CSV, or JSON reports
 
-## 🎯 Key Demonstrations for Interview
+## 🎯 Key System Demonstrations
 
 ### **1. T&C Extraction** ✅
 - **Show**: Upload PDF and extract requirements
@@ -171,7 +171,7 @@ Open your browser and navigate to: **http://localhost:8501**
 - Real-time data visualization
 - Export capabilities for professional reports
 
-## 🎯 Interview Success Tips
+## 🎯 System Demo Tips
 
 ### **1. Demonstrate Live**
 - Show the application running in real-time
@@ -198,7 +198,7 @@ Open your browser and navigate to: **http://localhost:8501**
 
 ## 🎉 Ready for Success!
 
-Your PDR system is now fully functional and ready for the LTIMindtree technical interview. The system successfully demonstrates:
+Your PDR system is now fully functional and ready for enterprise deployment. The system successfully demonstrates:
 
 - ✅ **Complete Requirements Implementation**
 - ✅ **Advanced AI/ML Integration**
@@ -206,4 +206,4 @@ Your PDR system is now fully functional and ready for the LTIMindtree technical 
 - ✅ **Production-Ready Architecture**
 - ✅ **Comprehensive Documentation**
 
-**Good luck with your interview!** 🎯✨ 
+**Enjoy exploring the system!** 🎯✨ 

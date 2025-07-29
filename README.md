@@ -1,7 +1,5 @@
 # 🚀 AI-Powered New Product Development (NPD) System
 
-## 🎯 **LTIMindtree Technical Interview Project**
-
 A comprehensive **New Product Development (NPD)** system that demonstrates AI/ML integration throughout the Preliminary Design Review (PDR) process. This system showcases advanced document analysis, intelligent requirement extraction, and AI-driven decision making for product development.
 
 ## 📋 **Core Requirements Met**

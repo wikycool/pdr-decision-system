@@ -1,0 +1,41 @@
+# Core data processing
+pandas
+numpy
+scikit-learn
+
+# Machine learning and optimization
+optuna
+joblib
+
+# Document processing
+pdfplumber
+camelot-py[cv]
+tabula-py
+python-docx
+
+# Web framework
+streamlit
+
+# Configuration
+pyyaml
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# PDF generation
+reportlab
+
+# AI/ML libraries
+langchain
+langchain-community
+langchain-openai
+tiktoken
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Utilities
+python-docx    

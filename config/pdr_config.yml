@@ -1,0 +1,104 @@
+# PDR (Preliminary Design Review) Configuration
+
+# Workflow steps
+workflow_steps:
+  - document_analysis
+  - requirements_extraction
+  - ideation
+  - brainstorming
+  - concept_selection
+  - final_approval
+
+# Criteria weights for different requirement types
+criteria_weights:
+  compliance: 0.3
+  technical: 0.4
+  cost: 0.2
+  risk: 0.1
+
+# Output formats for reports
+output_formats:
+  - json
+  - csv
+  - pdf
+  - png
+
+# Document analysis settings
+document_analysis:
+  supported_formats:
+    - pdf
+    - txt
+    - docx
+  extraction_methods:
+    - camelot
+    - tabula
+    - pdfplumber
+  keyword_categories:
+    compliance:
+      - iso
+      - astm
+      - asme
+      - ieee
+      - ul
+      - ce
+      - fcc
+      - rohs
+      - reach
+      - compliance
+      - standard
+      - certification
+    technical:
+      - material
+      - component
+      - specification
+      - dimension
+      - tolerance
+      - performance
+      - reliability
+      - durability
+      - safety
+      - quality
+    cost:
+      - cost
+      - price
+      - budget
+      - economic
+      - financial
+      - expense
+      - investment
+      - roi
+      - value
+      - efficiency
+
+# Pugh matrix settings
+pugh_matrix:
+  rating_scale:
+    -2: "Much Worse"
+    -1: "Worse"
+    0: "Same"
+    1: "Better"
+    2: "Much Better"
+  baseline_selection: "first_alternative"
+  visualization:
+    chart_types:
+      - bar_chart
+      - heatmap
+      - radar_chart
+    color_scheme: "RdYlGn"
+
+# Reporting settings
+reporting:
+  include_visualizations: true
+  include_recommendations: true
+  include_audit_trail: true
+  export_formats:
+    - json
+    - csv
+    - pdf
+    - png
+
+# Logging settings
+logging:
+  level: INFO
+  file: pdr_workflow.log
+  format: "%(asctime)s - %(levelname)s - %(message)s" 

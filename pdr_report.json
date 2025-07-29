@@ -1,0 +1,35 @@
+{
+  "analysis_timestamp": "2025-07-28T15:11:54.447351",
+  "baseline": "ALT_001",
+  "total_alternatives": 3,
+  "total_criteria": 0,
+  "summary": {
+    "best_alternative": "ALT_002",
+    "best_score": 0,
+    "score_range": {
+      "min": 0,
+      "max": 0
+    }
+  },
+  "detailed_results": [
+    {
+      "alternative_id": "ALT_002",
+      "description": "Stainless Steel Enclosure",
+      "final_score": 0,
+      "total_weight": 0,
+      "scores": []
+    },
+    {
+      "alternative_id": "ALT_003",
+      "description": "Plastic Enclosure",
+      "final_score": 0,
+      "total_weight": 0,
+      "scores": []
+    }
+  ],
+  "criteria_summary": {},
+  "recommendations": [
+    "Recommended alternative: ALT_002 (Score: 0)",
+    "Warning: Close scores suggest need for additional analysis"
+  ]
+}
